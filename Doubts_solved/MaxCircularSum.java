@@ -21,14 +21,14 @@ public class MaxCircularSum {
 
 	public static int MaximumCircularSum(int[] arr) {
 		int LinearMax = kadens(arr);
-		System.out.println(LinearMax);
+		//System.out.println(LinearMax);
 		int sum = 0;
 		for(int i=0;i<arr.length;i++) {
 			sum += arr[i];
 			arr[i] *= -1;
 		}
 		int minSubarrJoSignChangeSaMaxBanGaya = kadens(arr);
-		System.out.println(minSubarrJoSignChangeSaMaxBanGaya);
+		//System.out.println(minSubarrJoSignChangeSaMaxBanGaya);
 		int CircularMax = sum + minSubarrJoSignChangeSaMaxBanGaya;
 		if(CircularMax == 0) {
 			return LinearMax;
