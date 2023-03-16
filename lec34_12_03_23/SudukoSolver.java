@@ -25,7 +25,6 @@ public class SudukoSolver {
 		if(row == 9) {
 			//System.out.println("**************");
 			display(grid);
-			
 			return;
 		}
 		if(grid[row][col] != 0) {
