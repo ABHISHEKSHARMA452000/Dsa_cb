@@ -15,7 +15,7 @@ public class Coin_Combination_Try {
 		}
 		for(int i=idx;i<coins.length;i++) {
 			if(amt >= coins[i]) {
-				Coins_Com(coins,ans + coins[i],amt - coins[i],idx);
+				Coins_Com(coins,ans + coins[i],amt - coins[i],i);
 			}
 		}
 	}

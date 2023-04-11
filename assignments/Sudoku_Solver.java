@@ -1,20 +1,32 @@
 package assignments;
 
+import java.util.Scanner;
+
 public class Sudoku_Solver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] grid = { { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
-				 { 5, 2, 0, 0, 0, 0, 0, 0, 0 }, 
-				 { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
-				 { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
-				 { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
-				 { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
-				 { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
-				 { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
-				 { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
-				 };
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[][] grid = new int[n][n];
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid.length; j++) {
+				grid[i][j] = sc.nextInt();
+			}
+		}
+//		int[][] grid = { { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
+//				 { 5, 2, 0, 0, 0, 0, 0, 0, 0 }, 
+//				 { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
+//				 { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
+//				 { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
+//				 { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
+//				 { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
+//				 { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
+//				 { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
+//				 };
 		Print(grid,0,0);
+		//System.out.println("**********");
+		//Display(grid);
 	}
 	//0 based indexing kari hai and at 9 par aana pa col and row end hai 
 	//col ja 9 hoga means row increase karni and col =0 karna hai
