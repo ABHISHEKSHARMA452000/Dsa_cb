@@ -1,6 +1,9 @@
 package lec42_09_04_23;
 
 import lec40_02_04_23.DynamicQueue;
+//mana dynamic ko import kiya means normal stack/queue parent hai auska vo is package ma apna aap hi aagaya dynamic ka saath
+//pop efficient o(1) and push o(n)
+//opposite bhi possible in stack and queue both ma
 
 public class StackImplementation_UsingQueue {
 

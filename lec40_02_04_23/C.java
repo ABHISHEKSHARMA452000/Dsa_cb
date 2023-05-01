@@ -4,7 +4,7 @@ public class C extends P{
 
 	int d=2;
 	int d2 = 20;
-	@Override
+	@Override //fun() and Fun() different hai
 //	public void Fun() { //error dega @Override function name par when override nhai hoga function
 //		System.out.println("Fun In C");
 //	}
