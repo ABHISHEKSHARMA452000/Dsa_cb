@@ -26,7 +26,7 @@ public class BinaryTree {
 		}
 		return nn;
 	}
-	public void Display() {// ya isliya banaya hai bcoze root not accessible to client toh ek display funtion public banaya jo public hai vo internally privte display ko call kara ga
+	public void Display() {// ya isliya banaya hai bcoze root not accessible to client toh ek display funtion public banaya jo public hai vo internally privte display ko call kara ga and root of tree internaaly hi pass ho jayagi of particular that tree ki
 		
 		Display(root);
 	}
