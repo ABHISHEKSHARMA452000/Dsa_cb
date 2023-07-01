@@ -57,7 +57,7 @@ public class HashMap {
 	private void rehashing() {
 		Node[] newarr = new Node[arr.length*2];
 		Node[] oba = arr;
-		arr = newarr;
+		arr = newarr;//array pass nhi kiya toh global arr ma change aaya ga
 		size=0;
 		for(Node nn :oba) {
 			while(nn != null) {
@@ -86,7 +86,6 @@ public class HashMap {
 		while (temp != null) {
 			if (temp.key.equals(key)) {// temp.key == key ya address dehk ta hai toh mere ko value chaiya toh equals
 										// use kara ga
-
 				return temp.val;
 			}
 			temp = temp.next;
@@ -124,7 +123,7 @@ public class HashMap {
 
 	@Override
 	public String toString() {
-		String s = "";
+		String s = "{";
 		for (Node nn : arr) {
 			while (nn != null) {
 				s = s + nn.key + "=" + nn.val + ",";
