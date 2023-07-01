@@ -1,6 +1,6 @@
 package Leetcode_questions;
 
-public class Optimise_Rotate_array_189 {
+public class leetcode_189_Optimise_Rotate_array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

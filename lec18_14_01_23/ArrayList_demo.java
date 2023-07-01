@@ -1,6 +1,7 @@
 package lec18_14_01_23;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayList_demo {
 
@@ -8,10 +9,13 @@ public class ArrayList_demo {
 		// TODO Auto-generated method stub
 		ArrayList<Integer> list = new ArrayList<>();
 		System.out.println(list);
+	
 		//back ma addd karta hai list ma
 		list.add(1);
 		list.add(2);
 		list.add(3);
+		System.out.println(list);
+		Collections.sort(list,Collections.reverseOrder());
 		System.out.println(list);
 		//size of al;
 		System.out.println(list.size());
@@ -21,6 +25,7 @@ public class ArrayList_demo {
 		System.out.println(list);
 		//to remove
 		System.out.println(list.remove(2));
+		//System.out.println(list.remove());index deni mandatory hai in al ki kis index ko remove kar raha hu
 		System.out.println(list);
 		//update kara ga value
 		list.set(1,-11);

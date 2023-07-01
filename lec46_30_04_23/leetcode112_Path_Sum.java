@@ -2,7 +2,7 @@ package lec46_30_04_23;
 
 //import lec46_30_04_23.leetcode951_FlipEquivalent.TreeNode;
 
-public class Path_Sum {
+public class leetcode112_Path_Sum {
 	public class TreeNode {
 		int val;
 		TreeNode left;

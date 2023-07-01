@@ -1,23 +1,21 @@
-package lec47_06_05_23;
+package BinaryTree_Implementation;
 
-//import lec45_29_04_23.BinaryTree.Node;
-
-public class BinarySearchTree {
-	
-	public class Node{
+public class BST {
+	class Node{
 		int val;
 		Node left;
 		Node right;
 	}
 	Node root;
-	public BinarySearchTree(int[] in) {
-		root = createTree(in,0,in.length-1);//index par khalna hai
+	public BST(int[] in) {
+		root = createTree(in,0,in.length-1);
 	}
 	private Node createTree(int[] in,int si,int ei) {
+		// TODO Auto-generated method stub
 		if(si>ei) {
 			return null;
 		}
-		int mid  = (si+ei)/2;
+		int mid = (si+ei)/2;
 		Node nn = new Node();
 		nn.val = in[mid];
 		nn.left = createTree(in,si,mid-1);
@@ -40,6 +38,7 @@ public class BinarySearchTree {
 		return min(root);
 	}
 	private int min(Node node) {
+		// TODO Auto-generated method stub
 		if(node == null) {
 			return Integer.MAX_VALUE;
 		}

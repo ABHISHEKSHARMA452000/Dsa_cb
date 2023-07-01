@@ -1,4 +1,4 @@
-package OOPS_Concept;
+package OOPS_Inheritence_Concept;
 
 public class Client_inheritence {
 

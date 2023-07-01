@@ -1,6 +1,6 @@
-package lec46_30_04_23;
+package Leetcode_questions;
 
-public class leetcode236 {
+public class leetcode_236_LCA_tree {
 	public class TreeNode {
 		int val;
 		TreeNode left;
@@ -12,7 +12,7 @@ public class leetcode236 {
 	}
 	class Solution {
 	    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-	        if(root == null) {
+	    	if(root == null) {
 	        	return null;
 	        }
 	        if(root == p || root ==q) {
