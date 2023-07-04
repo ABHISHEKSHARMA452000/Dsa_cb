@@ -11,3 +11,6 @@ public abstract class Abstract_Demo {
 	}
 	
 }
+
+//if method abstract hai toh class ko abstract keyword use karna hi hoga if 
+//class abstrack kari hai toh may be abtract method ho ya nhi  bhi ho sakta hai in class

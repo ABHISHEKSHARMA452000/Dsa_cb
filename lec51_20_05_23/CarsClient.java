@@ -4,6 +4,7 @@ public class CarsClient {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//int[] arr = new int[7];
 		Cars[] arr = new Cars[5];
 		arr[0] = new Cars(200, 10, "White");
 		arr[1] = new Cars(1000, 20, "Black");

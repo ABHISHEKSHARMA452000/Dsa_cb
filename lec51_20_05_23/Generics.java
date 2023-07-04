@@ -1,7 +1,7 @@
 package lec51_20_05_23;
 
 public class Generics {
-
+	//only for non primitive ka liya hota hai generics ka concept 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Integer[] arr = {10,20,30,40,50};
