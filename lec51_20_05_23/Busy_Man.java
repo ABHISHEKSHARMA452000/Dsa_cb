@@ -3,8 +3,13 @@ package lec51_20_05_23;
 import java.util.*;
 //activivties selection problem
 public class Busy_Man {
-	
-	public static class Pair{
+	//static ka andar static hi use kar sakta hai non static ka object nhi bana ga static ma ausk class ko static karna padaga
+	//if static main class ma nonstatic ka object bana na hai toh
+	//non static ma non static ka object ban jata hai
+	//static ma staitc ka object ban jata hai
+	//non static class ka static ma object nhi ban ta
+	//static ka non static ma dehkna padaga
+	public static class Pair{// pair inner claas hai yaha par jiska pair static ma use karna hai so pair class ko static karna hi padaga
 		int st;
 		int et;
 		public Pair(int st,int et) {
@@ -32,10 +37,11 @@ public class Busy_Man {
 					//this - other hua hai ya marks based hai
 				}
 			});
+			//activity select problem
 			int activities = 1;
-			int end = arr[0].et;
+			int end = arr[0].et;//first activity ka end time
 			for (int i = 0; i < arr.length; i++) {
-				if(end <= arr[i].st) {
+				if(end <= arr[i].st) { //if other activity ka start time greater hai previos activity ka end time sa toh activity kar lo and if intersect hua time to vo activity perform nhi kar sakta
 					activities++;
 					end = arr[i].et;
 				}

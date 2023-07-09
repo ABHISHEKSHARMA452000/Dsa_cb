@@ -1,7 +1,10 @@
 package lec60_24_06_23;
 
+//fixed size window ka problem
+
 public class Maximum_SubSum_window_Size_K {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {1,2,7,5,11,3,2,1};
