@@ -1,15 +1,15 @@
-package lec53_27_05_23;
+package Graph_Implementation;
 
 import java.util.*;
 
 public class Graph {
-	//data-member
+
 	private HashMap<Integer, HashMap<Integer, Integer>> map;
 
 	public Graph(int v) {
 		map = new HashMap<>();
 		for (int i = 1; i <= v; i++) {
-			map.put(i, new HashMap<>());//empty map put kar diya har vertex ka corresponding
+			map.put(i, new HashMap<>());
 		}
 	}
 
@@ -18,18 +18,19 @@ public class Graph {
 		map.get(v2).put(v1, cost);
 	}
 
-	public boolean ContainsEdge(int v1, int v2) {// do ka bij ma edge hai ya nhi
-		return map.get(v1).containsKey(v2);
+	public boolean ConstainsEdge(int v1, int v2) {
+		return map.get(v1).containsKey(v2) && map.get(v2).containsKey(v1);
+
 	}
 
-	public boolean ContainsVertex(int v1) { // to check ki vertex hai ya nhi in graph
+	public boolean ContainsVertex(int v1) {
 		return map.containsKey(v1);
 	}
 
-	public int noofEdge() {// total no. of edges
+	public int NoofEdges() {
 		int sum = 0;
 		for (int key : map.keySet()) {
-			sum += map.get(key).size();
+			sum = sum + map.get(key).size();
 		}
 		return sum / 2;
 	}
@@ -48,7 +49,7 @@ public class Graph {
 
 	public void display() {
 		for (int key : map.keySet()) {
-			System.out.println(key + " " + map.get(key));
+			System.out.println(key + "-->" + map.get(key));
 		}
 	}
 
@@ -58,20 +59,20 @@ public class Graph {
 		}
 		visited.add(src);
 		for (int nbrs : map.get(src).keySet()) {
-			if (!visited.contains(nbrs)) {//if vo visited nhi hai toh 
+			if (!visited.contains(nbrs)) {
 				boolean ans = haspath(nbrs, des, visited);
 				if (ans) {
 					return ans;
 				}
 			}
 		}
-		
+		visited.remove(src);
 		return false;
 	}
 
 	public void Allpath(int src, int des, HashSet<Integer> visited, String ans) {
 		if (src == des) {
-			System.out.println(ans + des);
+			System.out.println(ans + src);
 			return;
 		}
 		visited.add(src);
@@ -83,25 +84,30 @@ public class Graph {
 		visited.remove(src);
 	}
 
+	// Bfs use karta hai to check ki koi path src to destination exist karta hai ya
+	// nhi
 	public boolean BFS(int src, int des) {
 		Queue<Integer> q = new LinkedList<>();
 		HashSet<Integer> visited = new HashSet<>();
 		q.add(src);
 		while (!q.isEmpty()) {
-			// 1remove;
-			int rv = q.poll();
-			// 2. ignore if already visited
+			// 1.remove
+			int rv = q.remove();
+			// 2.ignore //if rv phele sa hi visited hai toh contine kar dena hai
+			// ya graph ma cycle check ka liya bhi kaam aata hai if dubara mila toh yahi sa
+			// true return kar diya hai
 			if (visited.contains(rv)) {
 				continue;
 			}
-			// 3. visited mark karna
+			// 3.visited mark karna hoga
 			visited.add(rv);
-			// 4. selft work
+			// 4.word or selfwork
 			if (rv == des) {
 				return true;
 			}
-			// nbrs add karna jo hashset ma nhi
-			for (int nbrs : map.get(rv).keySet()) {
+			// 5. Nbrs add karna hoga jo visited ma marked nhi hoga only of rv
+			for (int nbrs : map.get(rv).keySet()) { // map.get(rv) sa hashmap mila of that vertex ka auspar keyset manva
+													// liya
 				if (!visited.contains(nbrs)) {
 					q.add(nbrs);
 				}
@@ -111,34 +117,36 @@ public class Graph {
 		return false;
 	}
 
+	// same kaam karta hai sa bfs ki path hai ya nhi search karka la raha hai
 	public boolean DFS(int src, int des) {
-		Stack<Integer> s = new Stack<>();
+		Stack<Integer> st = new Stack<>();
 		HashSet<Integer> visited = new HashSet<>();
-		s.push(src);
-		while (!s.isEmpty()) {
-			// 1remove;
-			int rv = s.pop();
-			// 2. ignore if already visited
+		st.push(src);
+		while (!st.isEmpty()) {
+			// 1. remove
+			int rv = st.pop();
+			// 2.ignore if rv already in visited ma hai toh continue karna hai
 			if (visited.contains(rv)) {
 				continue;
 			}
 			// 3. visited mark karna
 			visited.add(rv);
-			// 4. selft work
+			// 4.self-work
 			if (rv == des) {
 				return true;
 			}
-			// nbrs add karna jo hashset ma nhi
+			// 5.nbrs add karna to visited bhi nhi hai only wahi
 			for (int nbrs : map.get(rv).keySet()) {
 				if (!visited.contains(nbrs)) {
-					s.add(nbrs);
+					st.push(nbrs);
 				}
 			}
-
 		}
 		return false;
 	}
 
+	// BFT traversal karna hai in bfs manner
+	// static int c = 0; componets ka liya try kara tha
 	public void BFT() {
 		Queue<Integer> q = new LinkedList<>();
 		HashSet<Integer> visited = new HashSet<>();
@@ -148,17 +156,17 @@ public class Graph {
 			}
 			q.add(src);
 			while (!q.isEmpty()) {
-				// 1remove;
-				int rv = q.poll();
-				// 2. ignore if already visited
+				// 1.remove
+				int rv = q.remove();
+				// 2.ignore
 				if (visited.contains(rv)) {
 					continue;
 				}
-				// 3. visited mark karna
+				// 3.visited
 				visited.add(rv);
-				// 4. selft work
-				System.out.println(rv + " ");
-				//5. nbrs add karna jo hashset ma nhi
+				// 4.self work
+				System.out.print(rv + " ");
+				// 5.nbrs add
 				for (int nbrs : map.get(rv).keySet()) {
 					if (!visited.contains(nbrs)) {
 						q.add(nbrs);
@@ -167,32 +175,32 @@ public class Graph {
 			}
 		}
 	}
+
 	public void DFT() {
-		Stack<Integer> s = new Stack<>();
+		Stack<Integer> st = new Stack<>();
 		HashSet<Integer> visited = new HashSet<>();
-		for(int src : map.keySet()) {
-			if(visited.contains(src)) {
+		for (int src : map.keySet()) {
+			if (visited.contains(src)) {
 				continue;
 			}
-			s.push(src);
-			while (!s.isEmpty()) {
-				// 1remove;
-				int rv = s.pop();
-				// 2. ignore if already visited
+			st.push(src);
+			while (!st.isEmpty()) {
+				// 1. remove
+				int rv = st.pop();
+				// 2.ignore if rv already in visited ma hai toh continue karna hai
 				if (visited.contains(rv)) {
 					continue;
 				}
 				// 3. visited mark karna
 				visited.add(rv);
-				// 4. selft work
-				System.out.println((rv + " "));
-				// nbrs add karna jo hashset ma nhi
+				// 4.self-work
+				System.err.print(rv + " ");
+				// 5.nbrs add karna to visited bhi nhi hai only wahi
 				for (int nbrs : map.get(rv).keySet()) {
 					if (!visited.contains(nbrs)) {
-						s.add(nbrs);
+						st.push(nbrs);
 					}
 				}
-
 			}
 		}
 	}

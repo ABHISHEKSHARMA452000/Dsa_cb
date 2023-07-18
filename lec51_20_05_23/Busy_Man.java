@@ -1,4 +1,8 @@
 package lec51_20_05_23;
+ 
+//most important question ma ek question hai
+//amazon google salesforce all is type ka question puchti hai
+
 
 import java.util.*;
 //activivties selection problem
@@ -30,7 +34,7 @@ public class Busy_Man {
 			}
 			Arrays.sort(arr,new Comparator<Pair>() {
 
-				@Override
+				@Override //sort kiya hai on end time of the activities
 				public int compare(Pair o1, Pair o2) {
 					// TODO Auto-generated method stub
 					return o1.et - o2.et;
