@@ -15,15 +15,18 @@ public class Graph_Client {
 		g.AddEdge(5, 6, 3);
 		g.AddEdge(7, 5, 2);
 		g.AddEdge(6, 7, 3);
-		g.display();
+		//g.display();
 		//System.out.println(g.haspath(1, 6, new HashSet<>()));
 		//g.Allpath(1, 6, new HashSet<>(),"");
 		//System.out.println(g.BFS(1, 6) + "->" + "BFS");
 		//System.out.println(g.DFS(1, 6)+ "->" + "DFS");
-		g.BFT();
+		//g.BFT();
 		//System.out.println(g.c);
-		System.out.println();
-		g.DFT();
+		//System.out.println();
+		//g.DFT();
+		System.out.println(g.IsConnected());
+		System.out.println(g.IsCyclic());
+		
 	}
 
 }

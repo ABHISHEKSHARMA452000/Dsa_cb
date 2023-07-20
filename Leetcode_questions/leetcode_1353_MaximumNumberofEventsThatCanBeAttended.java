@@ -31,7 +31,7 @@ public class leetcode_1353_MaximumNumberofEventsThatCanBeAttended {
 			public int compare(int[] o1, int[] o2) {
 				// TODO Auto-generated method stub
 				//positive aaya toh swap karaga 
-				if(o1[si] >o2[si]) {
+				if(o1[si] >o2[si]) { //marks jaisi sorting hai if arr[1] > arr[2] then swap karna hai bubble sort jaisa hai
 					//start par sort kar in ascending ordee ma
 					return o1[si] - o2[si];
 				}else {

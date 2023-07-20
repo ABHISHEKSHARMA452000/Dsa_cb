@@ -204,5 +204,78 @@ public class Graph {
 			}
 		}
 	}
-
+	
+	public boolean IsCyclic() {
+		//if a graph has many component and any one is cyclic toh pura graph cyclic hai hence bft,dft laga na hoga for many components
+		Queue<Integer> q = new LinkedList<>();
+		HashSet<Integer> visited = new HashSet<>();
+		for (int src : map.keySet()) {
+			if (visited.contains(src)) {
+				continue;
+			}
+			q.add(src);
+			while (!q.isEmpty()) {
+				// 1.remove
+				int rv = q.remove();
+				// 2.ignore
+				if (visited.contains(rv)) {
+					return true;
+				}
+				// 3.visited
+				visited.add(rv);
+				// 4.self work
+				//System.out.print(rv + " ");
+				// 5.nbrs add
+				for (int nbrs : map.get(rv).keySet()) {
+					if (!visited.contains(nbrs)) {
+						q.add(nbrs);
+					}
+				}
+			}
+		}
+		return false;
+	}
+	public boolean IsConnected() {
+		//if count 1 aaya means ek hi compoent hai pura graph ka if many components hota toh count jada aata means discoonected graph hai
+		//isliya bft dft laga ga
+		Queue<Integer> q = new LinkedList<>();
+		HashSet<Integer> visited = new HashSet<>();
+		int count=0;
+		for (int src : map.keySet()) {
+			if (visited.contains(src)) {
+				continue;
+			}
+			count++;
+			q.add(src);
+			while (!q.isEmpty()) {
+				// 1.remove
+				int rv = q.remove();
+				// 2.ignore
+				if (visited.contains(rv)) {
+					continue;
+				}
+				// 3.visited
+				visited.add(rv);
+				// 4.self work
+				//System.out.print(rv + " ");
+				// 5.nbrs add
+				for (int nbrs : map.get(rv).keySet()) {
+					if (!visited.contains(nbrs)) {
+						q.add(nbrs);
+					}
+				}
+			}
+		}
+		return count == 1;//if count =1 hai toh connected graph hai if more than one means disconnected and count ya bhi bata
+		//raha hai ki kitna number of components hai
+	}
 }
+
+
+
+
+
+
+
+
+
