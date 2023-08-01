@@ -19,7 +19,7 @@ public class fibo_Dp {
 		int f2 = fib(n-2);
 		return f1 + f2;
 	}
-	public static int fibTD(int n,int[] dp) {
+	public static int fibTD(int n,int[] dp) {//recursive type top down memorization approach 
 		if(n == 0 || n ==1) {
 			return n;
 		}
@@ -33,7 +33,7 @@ public class fibo_Dp {
 	}
 	public static int fibBU(int n) {
 		int[] dp = new int[n+1];
-		dp[0] = 0;
+		dp[0] = 0;//isma base case sabsa phele fill kar dete hai
 		dp[1] = 1;
 		for(int i=2;i<dp.length;i++) {
 			dp[i] = dp[i-1] + dp[i-2];
