@@ -5,7 +5,7 @@ public class LinkedList {
 		public class Node{
 			int data;
 			Node next; //Student s = new Student();  s ka type Student hai and in same way next node ka address lena hai toh vo Node type ka hona chahiya
-		}
+		}//next jo hai vo address rak rah hai na ek node ka toh kis type ka hoga node type ka
 		private Node head; //first node of ll ka address
 		private Node tail; //last node of ll ka address
 		private int size; //tells about the size 

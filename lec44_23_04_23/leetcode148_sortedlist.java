@@ -1,7 +1,5 @@
 package lec44_23_04_23;
 
-import lec44_23_04_23.leetcode_876.ListNode;
-
 public class leetcode148_sortedlist {
 	public class ListNode {
 		int val;
@@ -60,7 +58,7 @@ public class leetcode148_sortedlist {
 	public ListNode middleNode(ListNode head) {
 		ListNode slow = head;
 		ListNode fast = head;
-		while (fast != null && fast.next.next != null) {
+		while (fast.next != null && fast.next.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
 		}

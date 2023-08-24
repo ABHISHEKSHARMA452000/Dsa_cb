@@ -1,7 +1,5 @@
 package lec44_23_04_23;
 
-import lec44_23_04_23.leetcode_876.ListNode;
-
 public class leetcode141_cycle {
 	public class ListNode {
 		int val;
