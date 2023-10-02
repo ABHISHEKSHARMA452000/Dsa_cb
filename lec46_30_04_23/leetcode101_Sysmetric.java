@@ -28,8 +28,8 @@ public class leetcode101_Sysmetric {
 	    	if(root1.val != root2.val) {
 	    		return false;
 	    	}
-	    	boolean left = Symmetric(root1.left,root2.right);
-	    	boolean right = Symmetric(root1.right,root2.left);
+	    	boolean left = Symmetric(root1.left,root2.right);//tree1 ka left and tree2 ka right
+	    	boolean right = Symmetric(root1.right,root2.left);//tree1 ka right and tree2 ka left ki call sa
 	    	return left && right;
 	    	
 	    }

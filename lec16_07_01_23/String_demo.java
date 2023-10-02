@@ -5,19 +5,19 @@ public class String_demo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "hello";
-		String s1 = new String("heblo");
+		String s1 = new String("hello");//heap ma addresss diffrent hoga then 's' sa
 		String s2= "hello";
 		String s3 = new String("hello");
 		System.out.println(s1);
-		System.out.println(s == s1);
+		System.out.println(s == s1);//ya only address compare karata hai
 		System.out.println(s2 == s);
 		System.out.println(s1 == s3);
 		System.out.println(s.charAt(2));
 		System.out.println(s.length());
 		System.out.println(Equals(s,s2));
 		System.out.println(Equals(s,s1)); //apna content check ka liya funtion
-		System.out.println(s.equals(s2));//java predefined content check ka liya 
-		
+		System.out.println(s.equals(s2));//java predefined content check ka liya phele address compare then string compare
+		System.out.println(s.equals(s1));
 //		for(int i=0;i<s.length();i++) {
 //			if(s.charAt(i) == s1.charAt(i)) {
 //				System.out.println(s.charAt(i));

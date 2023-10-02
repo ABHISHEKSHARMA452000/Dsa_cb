@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArrayList_demo {
-
+//add(val),add(index,val),get(index),remove(index),set(index,val),size()
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<Integer> list = new ArrayList<>();

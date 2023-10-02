@@ -24,7 +24,7 @@ public class Queue {
 	public int size() {
 		return size;
 	}
-	public void Enqueue(int item) throws Exception{ //enqueue means last ma add kara hu
+	public void Enqueue(int item) throws Exception{ //enqueue means last ma add karana hai
 		if(IsFull()) {
 			throw new Exception("Queue is Full");
 		}
