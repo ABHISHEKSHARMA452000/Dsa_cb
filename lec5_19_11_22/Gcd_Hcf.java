@@ -32,3 +32,8 @@ public class Gcd_Hcf {
 	}
 
 }
+
+//Neither does either or both of the values, whose greatest common divisor is being sought, have any impact of which positive
+//divisor is greatest. Therefore, GCD(a, b) = GCD(|a|, |b|) for any integers a and b, at least one of which is nonzero. 
+//GCD(18, −12) = GCD(−18, 12) = GCD(−18, −12) = GCD(18, 12) = 6
+

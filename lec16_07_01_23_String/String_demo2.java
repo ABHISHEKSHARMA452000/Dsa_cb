@@ -1,4 +1,4 @@
-package lec16_07_01_23;
+package lec16_07_01_23_String;
 
 public class String_demo2 {
 

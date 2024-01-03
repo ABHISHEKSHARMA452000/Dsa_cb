@@ -20,7 +20,7 @@ public class test {
 		System.out.println(f1+ "  " + f2);
 		
 		char ch1 = 48;
-		System.out.println(ch1);  // char ko value di toh ausna according character da diya;
+		System.out.println(ch1);  // char ko value di toh usna according to ascii value treat kar ka character da diya;
 		int ch2 = '0';
 		System.out.println(ch2); // int ko char diya toh auska according ascii value da di
 		

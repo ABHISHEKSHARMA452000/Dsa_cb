@@ -8,6 +8,7 @@ public class Char_datatype {
 		char ch = 'a';
 		int i = 1;
 		char ch1 = '1';
+		System.out.println(ch);
 		//char ch1 = sc.next().charAt(0);
 		ch++; //impilcit t.c karliya ch = (char)(ch+1); and one case for literal jisma implicit t.c kara hai
 		System.out.println(ch); 
