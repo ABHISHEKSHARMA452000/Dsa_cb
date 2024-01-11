@@ -25,7 +25,7 @@ public class leetcode236_lowestcomminancestor {
 	        }else if(left == null) {
 	        	return right;
 	        }else {
-	        	return left;
+	        	return left;    
 	        }
 	    }
 	}

@@ -84,8 +84,8 @@ public class Graph {
 		visited.remove(src);
 	}
 
-	// Bfs use karta hai to check ki koi path src to destination exist karta hai ya
-	// nhi
+	// Bfs use karta hai to check ki koi path src to destination exist karta hai ya nhi
+	
 	public boolean BFS(int src, int des) {
 		Queue<Integer> q = new LinkedList<>();
 		HashSet<Integer> visited = new HashSet<>();
@@ -269,6 +269,88 @@ public class Graph {
 		return count == 1;//if count =1 hai toh connected graph hai if more than one means disconnected and count ya bhi bata
 		//raha hai ki kitna number of components hai
 	}
+	
+//	public boolean bfs(int src,int dest) { 
+//		Queue<Integer> q = new LinkedList<>();
+//		HashSet<Integer> visited = new HashSet<>();
+//		q.add(src);
+//		while(!q.isEmpty()) {
+//			//remove
+//			int rv = q.remove();
+//			//ignore
+//			if(visited.contains(rv)) {
+//				continue;
+//			}
+//			//mark visited
+//			visited.add(rv);
+//			//self work
+//			if(rv == dest) {
+//				return true;
+//			}
+//			//add nbrs
+//			for(int nbrs:map.get(rv).keySet()) {
+//				if(!visited.contains(nbrs)) {
+//					q.add(nbrs);
+//				}
+//			}
+//		}
+//		return false;
+//	}
+//	public boolean dfs(int src,int dest) {
+//		Stack<Integer> st =  new Stack<>();
+//		HashSet<Integer> visited = new HashSet<>();
+//		st.push(src);
+//		while(!st.isEmpty()) {
+//			int rv  = st.pop();
+//			if(visited.contains(rv)) {
+//				continue;
+//			}
+//			visited.add(rv);
+//			if(rv == dest) {
+//				return true;
+//			}
+//			for(int nbrs:map.get(rv).keySet()) {
+//				if(!visited.contains(nbrs)) {
+//					st.push(nbrs);
+//				}
+//			}
+//			
+//		}
+//		return false;
+//	}
+//	public boolean isconnected() {
+//		Queue<Integer> q = new LinkedList<>();
+//		HashSet<Integer> visited = new HashSet<>();
+//		int count=0;
+//		for(int src:map.keySet()) {
+//			if(visited.contains(src)) {
+//				continue;
+//			}
+//			count++;
+//			q.add(src);
+//			while(!q.isEmpty()) {
+//				//remove
+//				int rv = q.remove();
+//				//ignore
+//				if(visited.contains(rv)) {
+//					continue;
+//				}
+//				//mark visited
+//				visited.add(rv);
+//				//self work
+////				if(rv == dest) {
+////					return true;
+////				}
+//				//add nbrs
+//				for(int nbrs:map.get(rv).keySet()) {
+//					if(!visited.contains(nbrs)) {
+//						q.add(nbrs);
+//					}
+//				}
+//			}
+//		}
+//		return count==1;
+//	}
 }
 
 

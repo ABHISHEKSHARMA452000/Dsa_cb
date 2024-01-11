@@ -16,7 +16,7 @@ public class StringCompression {
 	public static void Stringcompress(String str) {
 		String ans = "";
 		int count = 1;
-		int p = 0;
+		int p = 0;//last wala character ka liya pointer
 		for(int i=0;i<str.length()-1;i++) {
 			if(str.charAt(i) != str.charAt(i+1)) {
 				//ans += str.charAt(i) + count; isma phele right calculate hua  a + 3 in ascii 97 + 3 and 100 diya

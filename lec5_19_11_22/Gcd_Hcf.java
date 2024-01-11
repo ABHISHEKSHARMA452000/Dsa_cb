@@ -30,6 +30,16 @@ public class Gcd_Hcf {
 //			i++;
 //		}
 	}
+	public static int HCF(int a,int b) {
+		int divisor = a;
+		int divident = b;
+		while(divident>0) {
+			int rem = divident%divisor;
+			divident = divisor;
+			divisor = rem;
+		}
+		return divisor;
+	}
 
 }
 

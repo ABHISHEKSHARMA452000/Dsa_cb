@@ -30,7 +30,7 @@ public class leetcode_98_isValid_BST {
 	    	}
 	    	BstPair lbstp = ValidBst(root.left);
 	    	BstPair rbstp = ValidBst(root.right);
-	    	BstPair sbstp = new BstPair();
+	    	BstPair sbstp = new BstPair();//self bst pair
 	    	sbstp.max = Math.max(root.val,Math.max(lbstp.max,rbstp.max));
 	    	sbstp.min = Math.min(root.val,Math.min(lbstp.min,rbstp.min));
 	    	if(lbstp.isbst && rbstp.isbst && lbstp.max<root.val && rbstp.min > root.val) {

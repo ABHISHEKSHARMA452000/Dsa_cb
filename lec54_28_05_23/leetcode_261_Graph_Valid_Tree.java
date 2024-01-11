@@ -37,7 +37,7 @@ public class leetcode_261_Graph_Valid_Tree {
 					int rv = q.poll();
 					// 2 Ignore if Already visited
 					if (visited.contains(rv)) {
-						return false;//false isliya if rv visited ma mila toh means graph ma cy=ycle hai means Graph valid tree nhi hai isliya false return kar do
+						return false;//false isliya if rv visited ma mila toh means graph ma cycle hai means Graph valid tree nhi hai isliya false return kar do
 					}
 					// 3 visited marked
 					visited.add(rv);

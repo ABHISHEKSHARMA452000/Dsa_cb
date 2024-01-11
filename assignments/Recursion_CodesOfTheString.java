@@ -9,7 +9,7 @@ public class Recursion_CodesOfTheString {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
 		ArrayList<String> list = new ArrayList<>();
-		//Print(s, "");
+		Print(s, "");
 		ArrayList<String> ans = CodesofString(s,"",list);
 		System.out.println(ans);
 	}

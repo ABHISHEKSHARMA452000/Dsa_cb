@@ -6,7 +6,7 @@ public class StockSpan {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr= {30,35,40,38,35};
+		int[] arr= {30,35,34,30,35,40,38,35};
 		Span(arr);
 	}
 	

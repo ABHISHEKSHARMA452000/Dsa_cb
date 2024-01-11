@@ -1,15 +1,15 @@
-package Doubts_solved;
+package assignments;
 
 import java.util.Scanner;
 
-public class dnf {
+public class DNF_Algo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int[] arr = new int[n];
-		for(int i=0;i<arr.length;i++) {
+		for (int i = 0; i < arr.length; i++) {
 			arr[i] = sc.nextInt();
 		}
 		sort(arr);
@@ -18,9 +18,9 @@ public class dnf {
 		}
 	}
 	public static void sort(int[] arr) {
+		int l=0;//tell next 0 konsi index par aaya ga
+		int r = arr.length-1;//tell next 2 konsi index par aaya ga
 		int i=0;
-		int l=0; //sort 0 ke liya;//l ya bata raha hai ki next 0 konsi index par rakhna hai 
-		int r = arr.length-1; // sort 2 ke liya//r ya bata raha hai ki next 2 konsi index par rakhna hai 
 		while(i<=r) {
 			if(arr[i] == 0) {
 				int temp = arr[i];
@@ -28,22 +28,20 @@ public class dnf {
 				arr[l] = temp;
 				i++;
 				l++;
-			}
-			else if(arr[i] == 2) {
+			}else if(arr[i] == 2) {
 				int temp = arr[i];
 				arr[i] = arr[r];
 				arr[r] = temp;
 				r--;
+				//i++ //isliya nhi hoga incase ki 2 hi 2 sa swipe hoga ya and i++ kar diya toh phicha ek 2 raha gaya with sort kiya
 			}else {
 				i++;
 			}
 		}
-		
 	}
 
 }
-
 //6
-//0 1 2 0 1 2
+//0 1 2 0 1 2 //why we dont do i++ for 2 test case
 //8
 //1 0 2 1 0 0 2 1

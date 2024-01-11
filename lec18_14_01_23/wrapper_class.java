@@ -12,6 +12,7 @@ public class wrapper_class {
 		int  i =189;
 		Integer i1 = i; //autoBoxing
 		
+		
 		//Long l = 1899; //int literral bydefault
 		Long l = 1899L; // l  lagana sa vo long ma convert ho jata hai
 		long ll = l; // unBoxing
@@ -33,6 +34,10 @@ public class wrapper_class {
 		Character ch3 = 'a';
 		System.out.println(ch == ch1);
 		System.out.println(ch2 == ch3);
+		
+		
+//		Integer z1 = 100;
+//		int z2 = z1;
 	}
 
 }

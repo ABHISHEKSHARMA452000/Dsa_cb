@@ -56,3 +56,14 @@ public class RatChasesItsCheese {
 		}
 	}
 }
+
+
+
+
+
+//5 4
+//OXOO
+//OOOX
+//XOXO
+//XOOX
+//XXOO

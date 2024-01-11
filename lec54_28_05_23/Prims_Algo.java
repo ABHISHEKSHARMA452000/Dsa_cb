@@ -2,6 +2,8 @@ package lec54_28_05_23;
 
 import java.util.*;
 
+import javax.swing.text.html.ParagraphView;
+
 public class Prims_Algo {
 	//datamember
 	HashMap<Integer, HashMap<Integer, Integer>> map;
@@ -86,4 +88,36 @@ public class Prims_Algo {
 		g.AddEdge(6, 7, 3);
 		g.PrimsAlgo();
 	}
+//	public void prims() {
+//		int Totalcost = 0;
+//		HashSet<Integer> visited = new HashSet<>();
+//		PriorityQueue<PrimsPair> pq = new PriorityQueue<>(new Comparator<PrimsPair>() {
+//
+//			@Override
+//			public int compare(PrimsPair o1,PrimsPair o2) {
+//				// TODO Auto-generated method stub
+//				return o1.cost-o2.cost;
+//			}
+//			
+//		});
+//		PrimsPair pp = new PrimsPair(1,1,0);
+//		pq.add(pp);
+//		while(!pq.isEmpty()) {
+//			PrimsPair rp = pq.remove();
+//			if(visited.contains(rp.vtx)) {
+//				continue;
+//			}
+//			visited.add(rp.vtx);
+//			System.out.println(rp);
+//			Totalcost+=rp.cost;
+//			for(int nbrs:map.get(rp.vtx).keySet()) {
+//				if(!visited.contains(nbrs)) {
+//					int newcost = map.get(rp.vtx).get(nbrs);
+//					PrimsPair np = new PrimsPair(nbrs,rp.vtx,newcost);
+//					pq.add(np);
+//				}
+//			}
+//		}
+//		System.out.println("min cost" + Totalcost);
+//	}
 }
